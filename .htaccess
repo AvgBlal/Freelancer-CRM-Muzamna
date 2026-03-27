@@ -1,0 +1,51 @@
+
+  # Enable rewrite
+  RewriteEngine On
+  RewriteBase /
+
+  # Protect sensitive files
+  <FilesMatch "^\.">
+      Order allow,deny
+      Deny from all
+  </FilesMatch>
+
+  # Disable directory browsing
+  Options -Indexes
+
+  # Route to index.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php [QSA,L]
+
+  # Security Headers
+  <IfModule mod_headers.c>
+      Header set X-Content-Type-Options "nosniff"
+      Header set X-Frame-Options "SAMEORIGIN"
+      Header set X-XSS-Protection "1; mode=block"
+      Header set Referrer-Policy "strict-origin-when-cross-origin"
+      Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data:; connect-src 'self'"
+  </IfModule>
+
+  # PHP Settings
+  <IfModule mod_php.c>
+      php_value display_errors 0
+      php_value log_errors 1
+      php_value error_reporting E_ALL
+  </IfModule>
+
+  # For PHP 7+ as module
+  <IfModule mod_php7.c>
+      php_value display_errors 0
+      php_value log_errors 1
+      php_value error_reporting E_ALL
+  </IfModule>
+
+  # MIME types
+  AddType application/x-httpd-php .php
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

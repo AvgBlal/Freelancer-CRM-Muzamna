@@ -1,0 +1,8 @@
+{
+    "name": "speckkit/freelance-php",
+    "description": "Freelancer Client Manager",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^12.5"
+    }
+}
