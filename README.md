@@ -148,22 +148,7 @@ mysql -u root -p -e "CREATE DATABASE fcm_native CHARACTER SET utf8mb4 COLLATE ut
 ```
 
 ### 2. Run Migrations
-
-```bash
-mysql -u root -p fcm_native < dev/migrations/001_init.sql
-mysql -u root -p fcm_native < dev/migrations/002_indexes.sql
-mysql -u root -p fcm_native < dev/migrations/005_add_user_role_columns.sql
-mysql -u root -p fcm_native < dev/migrations/006_create_tasks_table.sql
-mysql -u root -p fcm_native < dev/migrations/007_create_task_supporting_tables.sql
-mysql -u root -p fcm_native < dev/migrations/008_create_dues_table.sql
-mysql -u root -p fcm_native < dev/migrations/009_create_expenses_table.sql
-mysql -u root -p fcm_native < dev/migrations/010_add_services_is_personal.sql
-mysql -u root -p fcm_native < dev/migrations/011_create_service_renewals.sql
-mysql -u root -p fcm_native < dev/migrations/012_create_notes_table.sql
-mysql -u root -p fcm_native < dev/migrations/013_create_activity_logs.sql
-mysql -u root -p fcm_native < dev/migrations/014_create_unpaid_tasks_table.sql
-mysql -u root -p fcm_native < dev/migrations/015-017_safe_items_service_types.sql
-```
+Done Already
 
 ### 3. Configure Credentials
 
