@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://freelancer-crm.muzamna.com/assets/img/logo.png" alt="Freelancer CRM" width="80">
-</p>
+
 
 <h1 align="center">Freelancer CRM</h1>
 
@@ -25,7 +23,7 @@
 ---
 
 <p align="center">
-  <img src="demo.jpg" alt="FCM Dashboard" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+  <img src="https://crm.muzamna.com/demo.jpg" alt="FCM Dashboard" width="100%" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
 </p>
 
 ---
