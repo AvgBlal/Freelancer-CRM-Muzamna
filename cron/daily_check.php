@@ -23,8 +23,13 @@ require_once __DIR__ . '/../app/Repositories/ExpenseRepo.php';
 require_once __DIR__ . '/../app/Repositories/TaskRepo.php';
 require_once __DIR__ . '/../app/Repositories/NotesRepo.php';
 require_once __DIR__ . '/../app/Repositories/ActivityLogRepo.php';
+require_once __DIR__ . '/../app/Core/Lang.php';
+require_once __DIR__ . '/../app/Core/Crypto.php';
 require_once __DIR__ . '/../app/Services/WhatsAppService.php';
 require_once __DIR__ . '/../app/Services/EmailService.php';
+
+// Initialize translation engine (needed by EmailService and WhatsAppService)
+\App\Core\Lang::init('ar');
 
 use App\Core\DB;
 use App\Repositories\SettingsRepo;
